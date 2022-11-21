@@ -76,8 +76,6 @@ func handleFunc(db *sql.DB, opts []wmenu.Opt) {
 
 		addPerson(db, newPerson)
 
-		break
-
 	case 1:
 
 		reader := bufio.NewReader(os.Stdin)
@@ -92,7 +90,7 @@ func handleFunc(db *sql.DB, opts []wmenu.Opt) {
 		for _, ourPerson := range people {
 			fmt.Printf("\n----\nFirst Name: %s\nLast Name: %s\nEmail: %s\nIP Address: %s\n", ourPerson.first_name, ourPerson.last_name, ourPerson.email, ourPerson.ip_address)
 		}
-		break
+
 	case 2:
 
 		reader := bufio.NewReader(os.Stdin)
@@ -131,7 +129,6 @@ func handleFunc(db *sql.DB, opts []wmenu.Opt) {
 			fmt.Println("One row affected")
 		}
 
-		break
 	case 3:
 
 		reader := bufio.NewReader(os.Stdin)
@@ -146,7 +143,7 @@ func handleFunc(db *sql.DB, opts []wmenu.Opt) {
 			fmt.Println("Deleted person from database")
 		}
 
-		break
+
 	case 4:
 		fmt.Println("Goodbye!")
 		os.Exit(3)
